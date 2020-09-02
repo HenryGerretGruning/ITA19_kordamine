@@ -1,7 +1,7 @@
-# ITA19 KORDAMINE
+#ITA19 KORDAMINE
 
-######  Henry-Gerret Grüning / [GITHUB](https://github.com/HenryGerretGruning/OOPLahendused/tree/master/ "Henry-Gerret Grüning Github")
-######  ITA19 õpilane 
+######Henry-Gerret Grüning / [GITHUB](https://github.com/HenryGerretGruning/OOPLahendused/tree/master/ "Henry-Gerret Grüning Github")
+######ITA19 õpilane 
 ##FUNKTSIOONID
     * Võimalus lisada uued laulud 
     * Võimalus kuvada tervet listi
