@@ -67,6 +67,25 @@ def albumiteKriipsud():
 vastus = input("Kas soovite albumite nimekirja näha?: ")
 if vastus == "jah":
     albumiteKriipsud()
+else:
+    w = input("Kas soovid otsida laulu? jah/ei ")
+
+
+    if w == "jah":
+        fail = open("albumid.txt", encoding="UTF-8")
+        albumid = []
+
+        for rida in fail:
+            albumid.append(rida)
+
+        otsitavnimi = input("Sisesta albumi või artisti nimi: ")
+        x = otsitavnimi.title()
+
+        for str in albumid:
+            if x in str:
+                print(str)
+
+
 
 fail.close()
 
