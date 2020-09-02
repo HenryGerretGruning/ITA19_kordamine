@@ -10,6 +10,39 @@ class albumA():
     def __init__(self, albumiNimi):
         self.albumiNimi = albumiNimi
 
+
+
+b = input("Kas soovite lisada laule juurde?: ")
+if b == "jah":
+    seis = "aktiivne"
+    grupp = artist(input("Sisestage esitaja nimi: "))
+    album = albumA(input("Sisestage albumi nimi: "))
+    aasta = input("Sisestage aasta: ")
+    # Tsükkel kestab kuni seis = aktiivne.
+    while seis == "aktiivne":
+        laul = laulA(input("Sisestage laulu pealkiri: "))
+        # Liidab kokku esitaja, albumi, aasta ning laulu. Vahel on tabulutsioon.
+        laulupealkiri = grupp.artistiNimi.title() + "\t" + album.albumiNimi.title() + "\t" + aasta + "\t" + laul.lauluNimi.title()
+        fail = open("albumid.txt", "a", encoding="UTF-8")
+        # Lisab nimekirja uue plaadi andmed.
+        fail.write("\n" + laulupealkiri)
+
+        # Küsib, kas kasutaja soovib veel laule sisestada.
+        b = input("Kas soovite veel laule lisada? jah/ei: ")
+        if b == "jah":
+            # Seis püsib aktiivne.
+            seis = "aktiivne"
+        else:
+            # Seisu muutmine inaktiivseks.
+            seis = "inaktiivne"
+            fail.close()
+
+
+
+# Kui vastus ei ole jah, siis liigub järgmise küsimuse juurde.
+else:
+    pass
+
 fail = open("albumid.txt", encoding="UTF-8")
 albumid = []
 
@@ -28,36 +61,7 @@ def albumiteKriipsud():
                 print()
         print(esineja.artistiNimi, album.albumiNimi, aasta, laul.lauluNimi)
 
-b = input("Kas soovite lisada laule juurde?: ")
 
-if b == "jah":
-    seis = "aktiivne"
-    grupp = input("Sisestage esitaja nimi: ")
-    album = input("Sisestage albumi nimi: ")
-    aasta = input("Sisestage aasta: ")
-    # Tsükkel kestab kuni seis = aktiivne.
-    while seis == "aktiivne":
-
-        laul = input("Sisestage laulu pealkiri: ")
-        # Liidab kokku esitaja, albumi, aasta ning laulu. Vahel on tabulutsioon.
-        laulupealkiri = grupp.title() + "\t" + album.title() + "\t" + aasta + "\t" + laul.title()
-        fail = open("albumid.txt", "a", encoding="UTF-8")
-        # Lisab nimekirja uue plaadi andmed.
-        fail.write("\n" + laulupealkiri)
-
-        # Küsib, kas kasutaja soovib veel laule sisestada.
-        b = input("Kas soovite veel laule lisada? jah/ei: ")
-        if b == "jah":
-            # Seis püsib aktiivne.
-            seis = "aktiivne"
-        else:
-            # Seisu muutmine inaktiivseks.
-            seis = "inaktiivne"
-            fail.close()
-
-# Kui vastus ei ole jah, siis liigub järgmise küsimuse juurde.
-else:
-    pass
 
 
 vastus = input("Kas soovite albumite nimekirja näha?: ")
