@@ -8,7 +8,7 @@ ITA19 õpilane
    * Võimalus listist otsida laule
     
     
-## Kuidas kasutada programmi? ☝️
+## Kuidas kasutada programmi?
 Programmi kasutamine on väga kerge. ✔️
 1. Käivita kood.py 
    - Kasuta __Thonny__ tarkvara või muud sarnast tarkvara, mis kasutab __Pythonit__. [Thonny tarkvara link](https://thonny.org/ "Thonny tarkvara") 
